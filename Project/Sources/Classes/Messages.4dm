@@ -11,12 +11,13 @@ Function create($messageData : Object)->$message : cs:C1710.Message
 	
 	var $response : Object
 	
-	ARRAY TEXT:C222($headerNames; 0)
-	ARRAY TEXT:C222($headerValues; 0)
+	ARRAY TEXT:C222($headerNames; 1)
+	ARRAY TEXT:C222($headerValues; 1)
 	
 	$headerNames{1}:="Authorization"
 	$headerValues{1}:=This:C1470.client.basicAuth()
 	
+	var $httpResponse : Integer
 	$httpResponse:=HTTP Request:C1158(HTTP POST method:K71:2; This:C1470.url()+"?"+This:C1470.buildQuery($messageData); ""; $response; $headerNames; $headerValues)
 	
 /*

@@ -25,8 +25,7 @@ $client.messages.create($message)
 
 ## TODO
 
-- urlEncode
-- test it
+- test it, issue with encoding?
 
 ## DOC
 

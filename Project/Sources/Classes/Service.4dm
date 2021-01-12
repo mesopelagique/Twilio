@@ -29,6 +29,7 @@ Function buildQuery($params : Object)->$query : Text
 					$query:=$query+"&"
 				End if 
 				$query:=$query+$key+"="+This:C1470.urlEncode(String:C10($value))
+				//$query:=$query+$key+"=\""+This.urlEncode(String($value))+"\"" // quote?
 				
 		End case 
 		
@@ -49,26 +50,16 @@ Function urlEncode($url : Text)->$encoded : Text
 		$code:=Character code:C91($char)
 		
 		$shouldEncode:=False:C215
-		// TODO check if correct URL encoding type(the + for instance)
+		
 		Case of 
-			: ($code=36)
-				// $
-			: ($code=38)
-				// &
-			: ($code>42) & ($code<48)
-				// + , - . /
+			: ($code=32)
+				
+			: ($code=45)
+				// -
+			: ($code=46)
+				// .
 			: ($code>47) & ($code<58)
 				// 0 1 2 3 4 5 6 7 8 9
-			: ($code=58)
-				// :
-			: ($code=59)
-				// ;
-			: ($code=61)
-				// =
-			: ($code=63)
-				// ?
-			: ($code=64)
-				// @
 			: ($code>64) & ($code<91)
 				// A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 			: ($code=95)

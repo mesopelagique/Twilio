@@ -1,3 +1,6 @@
 Project/DerivedData
 Data
 userPreferences.*
+twilio.json
+twilio.test.json
+php.ini

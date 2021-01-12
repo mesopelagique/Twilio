@@ -13,7 +13,7 @@ Function baseURL()->$url : Text
 	$url:="https://api.twilio.com/2010-04-01/Accounts/"
 	
 Function basicAuth()->$header : Text
-	$header:="Basic "+This:C1470._base64Encode(This:C1470.accountSid+":"This:C1470.authToken)
+	$header:="Basic "+This:C1470._base64Encode(This:C1470.accountSid+":"+This:C1470.authToken)
 	
 Function _base64Encode($input : Text)->$output : Text
 	// TODO correct encoding?

@@ -6,7 +6,7 @@
 [![license][license-shield]][license-url]
 [![discord][discord-shield]][discord-url]
 
-Use [Twilio](www.twilio.com/referral/NqfrgQ) REST API to send SMS
+Use [Twilio](https://www.twilio.com/referral/NqfrgQ) REST API to send SMS
 
 ## Usage
 

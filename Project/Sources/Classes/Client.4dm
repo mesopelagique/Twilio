@@ -3,6 +3,7 @@
 Class constructor($accountSid : Text; $authToken : Text)
 	This:C1470.accountSid:=$accountSid
 	This:C1470.authToken:=$authToken
+	This:C1470.messages:=cs:C1710.Messages.new(This:C1470)
 	
 	
 Function baseURL()->$url : Text
@@ -22,10 +23,5 @@ Function _base64Encode($input : Text)->$output : Text
 	//$output:=BLOB to text($blobTmp; UTF8 text with length)
 	//$output:=BLOB to text($blobTmp; UTF8 text without length)
 	//$output:=BLOB to text($blobTmp; Mac C string)
-	
-	
-Function messages()->$messages : cs:C1710.Messages
-	$messages:=cs:C1710.Messages.new(This:C1470)
-	
 	
 	

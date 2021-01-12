@@ -15,4 +15,4 @@ $message:=New object:C1471(\
 "from"; "+15017122661"; \
 "to"; "+15558675310")
 
-$client.messages().create($message)
+$client.messages.create($message)

@@ -8,8 +8,6 @@
 
 Use [Twilio](www.twilio.com/referral/NqfrgQ) REST API to send SMS
 
-IN PROGRESS
-
 ## Usage
 
 ```4d
@@ -22,10 +20,6 @@ $message:=New object(\
 
 $client.messages.create($message)
 ```
-
-## TODO
-
-- test it, issue with encoding?
 
 ## DOC
 

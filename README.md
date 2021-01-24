@@ -8,6 +8,8 @@
 
 Use [Twilio](https://www.twilio.com/referral/NqfrgQ) REST API to send SMS
 
+You could for instance send [OTP](https://github.com/mesopelagique/OTP) code for authentication
+
 ## Usage
 
 ```4d
